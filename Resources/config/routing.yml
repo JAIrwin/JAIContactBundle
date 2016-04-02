@@ -1,0 +1,7 @@
+jai_contact_submit:
+    path:     /contact
+    defaults: { _controller: JAIContactBundle:Contact:contact }
+    
+jai_contact_success:
+    path:     /contact/success
+    defaults: { _controller: JAIContactBundle:Contact:success }
