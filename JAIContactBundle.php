@@ -1,6 +1,6 @@
 <?php
 
-namespace JAI\ContactBundle;
+namespace JAI\Bundle\ContactBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
