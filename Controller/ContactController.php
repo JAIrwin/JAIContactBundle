@@ -18,7 +18,7 @@ class ContactController extends Controller
 		$form->handleRequest($request);
 		if ($form->isSubmitted() && $form->isValid()) {
 			// ... action when submitted
-			sendFeedback($contact);
+			$this->sendFeedback($contact);
 
 			return $this->redirectToRoute('jai_contact_success');
 		}
@@ -45,7 +45,7 @@ class ContactController extends Controller
 		// html version of the message
 		->setBody(
 			$this->renderView(
-				'Emails/feedback.html.twig',
+				'JAIContactBundle:Emails/feedback.html.twig',
 				array(
 					'from_name' => $fromName,
 					'from_email' => $fromEmail,
@@ -58,7 +58,7 @@ class ContactController extends Controller
 		// plaintext version of the message
 		->addPart(
 			$this->renderView(
-				'Emails/feedback.txt.twig',
+				'JAIContactBundle:Emails/feedback.txt.twig',
 				array(
 					'from_name' => $fromName,
 					'from_email' => $fromEmail,

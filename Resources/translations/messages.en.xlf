@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="email_label">
+                <source>Email</source>
+                <target>Email</target>
+            </trans-unit>
+            <trans-unit id="email_placeholder">
+                <source>email.placeholder</source>
+                <target>example@domain.tld</target>
+            </trans-unit>
+            <trans-unit id="contact_from_name">
+                <source>contact.from.name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="contact_name_placeholder">
+                <source>contact.name.placeholder</source>
+                <target>Your Name</target>
+            </trans-unit>
+            <trans-unit id="contact_subject">
+                <source>contact.subject</source>
+                <target>Subject</target>
+            </trans-unit>
+            <trans-unit id="contact_message">
+                <source>contact.message</source>
+                <target>Message</target>
+            </trans-unit>
+            <trans-unit id="Send">
+                <source>Send</source>
+                <target>Send</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
