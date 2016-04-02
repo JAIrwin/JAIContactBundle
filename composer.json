@@ -1,0 +1,21 @@
+{
+    "name": "jairwin/contact-bundle",
+    "type": "symfony-bundle",
+    "description": "This bundle provides a basic feedback implementation",
+    "keywords": ["contact","email"],
+    "homepage": "https://github.com/JAIrwin/JAIContactBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Irwin",
+            "email": "developer@jairwin.com",
+            "homepage": "http://jairwin.com",
+        }
+    ],
+    "require": {
+        "excelwebzone/recaptcha-bundle": "^1.4"
+    },
+    "autoload": {
+        "psr-4": { "JAI\\Bundle\\UserBundle\\": "" }
+    }
+}
