@@ -16,6 +16,6 @@
         "excelwebzone/recaptcha-bundle": "^1.4"
     },
     "autoload": {
-        "psr-4": { "JAI\\Bundle\\UserBundle\\": "" }
+        "psr-4": { "JAI\\Bundle\\ContactBundle\\": "" }
     }
 }
