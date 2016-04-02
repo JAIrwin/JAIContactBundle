@@ -1,5 +1,5 @@
 <?php
-namespace JAI\ContactBundle\Form\Contact;
+namespace JAI\Bundle\ContactBundle\Form\Contact;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

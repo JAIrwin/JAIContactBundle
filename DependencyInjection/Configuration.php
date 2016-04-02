@@ -1,6 +1,6 @@
 <?php
 
-namespace JAI\ContactBundle\DependencyInjection;
+namespace JAI\Bundle\ContactBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
