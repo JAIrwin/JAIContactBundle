@@ -1,8 +1,8 @@
 {
     "name": "jairwin/contact-bundle",
     "type": "symfony-bundle",
-    "description": "This bundle provides a basic feedback implementation",
-    "keywords": ["contact","email"],
+    "description": "This bundle provides a basic feedback implementation for symfony 3 projects",
+    "keywords": ["contact","email","symfony"],
     "homepage": "https://github.com/JAIrwin/JAIContactBundle",
     "license": "MIT",
     "authors": [
