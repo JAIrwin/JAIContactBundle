@@ -109,7 +109,9 @@ This bundle sends all contact emails to a single address. This is configured in
 
 ##Using
 
-Once installed and configured the contact form can be reached at the route \contact.
+Once installed and configured the contact form can be reached at the route `\contact`. The form uses the
+Symfony Forms Component (documentation: [Forms from the Symfony Book](http://symfony.com/doc/current/book/forms.html)),
+so it will use the form themes (documentation: [Form Themes from the Symfony Book](https://symfony.com/doc/current/cookbook/form/form_customization.html#cookbook-form-customization-form-themes)).
 
 ##To-Do
 
