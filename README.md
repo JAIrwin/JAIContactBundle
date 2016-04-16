@@ -35,7 +35,7 @@ class AppKernel extends Kernel
             // ...
 
 			new EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle(),
-            new JAI\ContactBundle\JAIContactBundle(),
+            new JAI\Bundle\ContactBundle\JAIContactBundle(),
         );
 
         // ...

@@ -5,8 +5,8 @@ namespace JAI\Bundle\ContactBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use JAI\ContactBundle\Form\Contact\ContactForm;
-use JAI\ContactBundle\Entity\Contact;
+use JAI\Bundle\ContactBundle\Form\Contact\ContactForm;
+use JAI\Bundle\ContactBundle\Entity\Contact;
 
 
 class ContactController extends Controller
