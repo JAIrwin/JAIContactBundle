@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "excelwebzone/recaptcha-bundle": "^1.4"
+        "excelwebzone/recaptcha-bundle": "^1.4.2"
     },
     "autoload": {
         "psr-4": { "JAI\\Bundle\\ContactBundle\\": "" }
