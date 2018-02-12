@@ -1,4 +1,4 @@
-<p>This message was sent by the contact form at JAIrwin.org.</p>
+<p>This message was sent by the contact form at {{ app.request.getSchemeAndHttpHost() }}</p>
 <hr>
 <p><b>Sender Name:</b>  {{ from_name }}
 <p><b>Sender Email:</b>  {{ from_email }}
