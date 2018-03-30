@@ -38,8 +38,7 @@ class ContactController extends Controller
 		$subject = $contact->getSubject();
 		$message = $contact->getMessage();
 		$feedback_email = $this->getParameter('feedback_email');
-		$feedback = \Swift_Message::newInstance()
-		->setSubject($subject)
+		$feedback = (new \Swift_Message($subject))
 		->setFrom($fromEmail)
 		->setTo($feedback_email)
 		// html version of the message
