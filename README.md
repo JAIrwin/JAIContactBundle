@@ -34,7 +34,7 @@ class AppKernel extends Kernel
         $bundles = array(
             // ...
 
-			new EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle(),
+            new EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle(),
             new JAI\Bundle\ContactBundle\JAIContactBundle(),
         );
 
