@@ -1,10 +1,10 @@
-#JAIContactBundle
+# JAIContactBundle
 
 This bundle provides a basic feedback implementation for Symfony 3 projects.
 
-##Installation
+## Installation
 
-###Step 1: Download the Bundle
+### Step 1: Download the Bundle
 
 Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
@@ -17,7 +17,7 @@ This command requires you to have Composer installed globally, as explained
 in the [installation chapter](https://getcomposer.org/doc/00-intro.md)
 of the Composer documentation.
 
-###Step 2: Enable the Bundle
+### Step 2: Enable the Bundle
 
 Then, enable the bundle and required bundle by adding them to the list of registered bundles
 in the `app/AppKernel.php` file of your project:
@@ -45,7 +45,7 @@ class AppKernel extends Kernel
 }
 ```
 
-###Step 3: Add Routing
+### Step 3: Add Routing
 
 To add the provided routes for /contact and /contact/success update 
 `app/config/routing.yml`:
@@ -58,7 +58,7 @@ jai_contact:
     prefix:   /
 ```
 
-###Step 4: Configure ReCaptcha
+### Step 4: Configure ReCaptcha
 
 This bundle uses the EZWRecaptchaBundle which is configured in `app/config/config.yml`
 (documentation: https://github.com/excelwebzone/EWZRecaptchaBundle):
@@ -72,7 +72,7 @@ ewz_recaptcha:
     locale_key:  %kernel.default_locale%
 ```
 
-###Step 5: Enable Translations
+### Step 5: Enable Translations
 
 To get the correct form labels and placeholders enable translation. In a new Symfony3
 project it needs to be uncommented in `app/config/config.yml`:
@@ -95,7 +95,7 @@ And set the locale in `app/config/parameters.yml`:
 Note - so far only english translations have been provided in this bundle. Most of
 the defaults are rather ugly.
 
-###Step 6: Configure Recipient
+### Step 6: Configure Recipient
 
 This bundle sends all contact emails to a single address. This is configured in
 `app/config/parameters.yml`:
@@ -107,34 +107,34 @@ This bundle sends all contact emails to a single address. This is configured in
     feedback_email:  address@yoursite.tld
 ```
 
-##Using
+## Using
 
 Once installed and configured the contact form can be reached at the route `\contact`. The form uses the
 Symfony Forms Component (documentation: [Forms from the Symfony Book](http://symfony.com/doc/current/book/forms.html)),
 so it will use the form themes (documentation: [Form Themes from the Symfony Book](https://symfony.com/doc/current/cookbook/form/form_customization.html#cookbook-form-customization-form-themes)).
 
-##To-Do
+## To-Do
 
-###Unit Testing
+### Unit Testing
 
 Currently there aren't any unit tests, and that's just not right.
 
-###Better Handling of Configuration
+### Better Handling of Configuration
 
 Should probably move feedback_email from parameters.yml to config.yml and add more 
 configurable settings.
 
-###Flood Control
+### Flood Control
 
 Could stop some bot attacks before they hit the form in the first place.
 
-###Remove Dependency on EZWRecaptchaBundle
+### Remove Dependency on EZWRecaptchaBundle
 
 It would be better if there was an optional setting like "use captcha" and then further 
 settings such as only requiring after a certain amount of flooding, and then specifics
 related to whatever captcha implementation is used in the current project.
 
-###Multiple To Addresses
+### Multiple To Addresses
 
 Configure optional topic selection that would allow the user to select a topic for the
 feedback that would address the email to different recipients. Some examples:
