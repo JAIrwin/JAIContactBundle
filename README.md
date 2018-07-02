@@ -61,7 +61,7 @@ jai_contact:
 ### Step 4: Configure ReCaptcha
 
 This bundle uses the EZWRecaptchaBundle which is configured in `app/config/config.yml`
-(documentation: https://github.com/excelwebzone/EWZRecaptchaBundle):
+(documentation: [EWZRecaptcha on GitHub](https://github.com/excelwebzone/EWZRecaptchaBundle)):
 
 ``` yaml
 # app/config/config.yml
@@ -71,6 +71,8 @@ ewz_recaptcha:
     private_key: here_is_your_private_key
     locale_key:  %kernel.default_locale%
 ```
+
+For development you need to provide separate configuratons using the public test keys everywhere except production (documentation: [Google Recaptcha FAQ](https://developers.google.com/recaptcha/docs/faq)). You could either store the keys in `parameters.yml` or add the `ewz_recaptcha` configurations to `config_dev.yml`, `config_prod.yml`, and `config_test.yml` instead of `config.yml`.
 
 ### Step 5: Enable Translations
 
