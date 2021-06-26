@@ -38,35 +38,42 @@ class ContactController extends Controller
 		$subject = $contact->getSubject();
 		$message = $contact->getMessage();
 		$feedback_email = $this->getParameter('feedback_email');
-		$feedback = (new \Swift_Message($subject))
-		->setFrom($fromEmail)
-		->setTo($feedback_email)
-		// html version of the message
-		->setBody(
-			$this->renderView(
-				'JAIContactBundle:Emails:feedback.html.twig',
-				array(
-					'from_name' => $fromName,
-					'from_email' => $fromEmail,
-					'subject' => $subject,
-					'message' => $message
-				)
-			),
-			'text/html'
-		)
-		// plaintext version of the message
-		->addPart(
-			$this->renderView(
-				'JAIContactBundle:Emails:feedback.txt.twig',
-				array(
-					'from_name' => $fromName,
-					'from_email' => $fromEmail,
-					'subject' => $subject,
-					'message' => $message
-				)
-			),
-			'text/plain'
-		);
-		$this->get('mailer')->send($feedback);
+		if (checkTags($message)) {
+			$feedback = (new \Swift_Message($subject))
+			->setFrom($fromEmail)
+			->setTo($feedback_email)
+			// html version of the message
+			->setBody(
+				$this->renderView(
+					'JAIContactBundle:Emails:feedback.html.twig',
+					array(
+						'from_name' => $fromName,
+						'from_email' => $fromEmail,
+						'subject' => $subject,
+						'message' => $message
+					)
+				),
+				'text/html'
+			)
+			// plaintext version of the message
+			->addPart(
+				$this->renderView(
+					'JAIContactBundle:Emails:feedback.txt.twig',
+					array(
+						'from_name' => $fromName,
+						'from_email' => $fromEmail,
+						'subject' => $subject,
+						'message' => $message
+					)
+				),
+				'text/plain'
+			);
+			$this->get('mailer')->send($feedback);
+		}
+	}
+	
+	public function checkTags($body) {
+		$bodyclean = strip_tags($body);
+		return $body == $bodyclean;
 	}
 }
