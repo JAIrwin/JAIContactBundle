@@ -17,10 +17,11 @@ class ContactController extends Controller
 		$form = $this->createForm(ContactForm::class, $contact);
 		$form->handleRequest($request);
 		if ($form->isSubmitted() && $form->isValid()) {
-			// ... action when submitted
-			$this->sendFeedback($contact);
-
-			return $this->redirectToRoute('jai_contact_success');
+			$honeytrap = $contact->getFromEmail();
+			if($honeytrap == '') {
+				$this->sendFeedback($contact);
+				return $this->redirectToRoute('jai_contact_success');
+			}
 		}
 		return $this->render('JAIContactBundle:contact:submit.html.twig', array('form' => $form->createView(),
 			)
@@ -34,7 +35,7 @@ class ContactController extends Controller
 
 	public function sendFeedback($contact) {
 		$fromName = $contact->getFromName();
-		$fromEmail = $contact->getFromEmail();
+		$fromEmail = $contact->getRepeatEmail();
 		$subject = $contact->getSubject();
 		$message = $contact->getMessage();
 		$feedback_email = $this->getParameter('feedback_email');

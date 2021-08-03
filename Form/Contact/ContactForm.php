@@ -24,6 +24,10 @@ class ContactForm extends AbstractType
 		)
 		->add('fromEmail', EmailType::class, [
 			'label' => 'Email',
+			'required' => false,
+			'attr' => [ 'placeholder' => 'email.placeholder' ] ])
+		->add('repeatEmail', EmailType::class, [
+			'label' => 'Email',
 			'attr' => [ 'placeholder' => 'email.placeholder' ] ])
 		->add('subject', TextType::class, [ 'label' => 'contact.subject' ])
 		->add('message', TextareaType::class, [ 'label' => 'contact.message' ])

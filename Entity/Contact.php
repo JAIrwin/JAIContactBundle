@@ -12,10 +12,14 @@ class Contact
      */
 	protected $fromName;
     /**
-     * @Assert\NotBlank()
      * @Assert\Email
      */
 	protected $fromEmail;
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Email
+     */
+	protected $repeatEmail;
     /**
      * @Assert\NotBlank()
      */
@@ -48,6 +52,16 @@ class Contact
 	public function setFromEmail($fromEmail)
 	{
 		$this->fromEmail = $fromEmail;
+	}
+	
+	public function getRepeatEmail()
+	{
+		return $this->repeatEmail;
+	}
+
+	public function setRepeatEmail($repeatEmail)
+	{
+		$this->repeatEmail = $repeatEmail;
 	}
 	
 	public function getSubject()
