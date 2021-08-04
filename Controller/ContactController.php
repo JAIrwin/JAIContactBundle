@@ -8,7 +8,6 @@ use Symfony\Component\HttpFoundation\Request;
 use JAI\Bundle\ContactBundle\Form\Contact\ContactForm;
 use JAI\Bundle\ContactBundle\Entity\Contact;
 
-
 class ContactController extends Controller
 {
 	public function contactAction(Request $request)
@@ -20,8 +19,8 @@ class ContactController extends Controller
 			$honeytrap = $contact->getFromEmail();
 			if($honeytrap == '') {
 				$this->sendFeedback($contact);
-				return $this->redirectToRoute('jai_contact_success');
 			}
+			return $this->redirectToRoute('jai_contact_success');
 		}
 		return $this->render('JAIContactBundle:contact:submit.html.twig', array('form' => $form->createView(),
 			)
